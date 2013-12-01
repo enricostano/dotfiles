@@ -1,0 +1,24 @@
+[user]
+	name = enricostano
+	email = ocirne.onats@gmail.com
+[github]
+	user = enricostano
+[alias]
+	show-graph = log --graph --abbrev-commit --pretty=oneline
+  glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
+[color]
+  diff = auto
+  branch = auto
+  status = auto
+  interactive = auto
+	ui = true
+[alias]
+  a = add
+  s = status -s
+  current = rev-parse --abbrev-ref HEAD
+  out = !git log origin/$(git current)..
+  co = checkout
+  cm = commit
+[core]
+	editor = vim
+	excludesfile = /home/enrico/.gitignore_global
