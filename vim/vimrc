@@ -1,93 +1,62 @@
-" ~/.vimrc
 execute pathogen#infect()
 
 set t_Co=256
-
 set tabstop=2       " Number of spaces that a <Tab> in the file counts for.
-
 set shiftwidth=2    " Number of spaces to use for each step of (auto)indent.
-
 set expandtab
-
-set background=dark " When set to "dark", Vim will try to use colors that look
-                    " good on a dark background. When set to "light", Vim will
-                    " try to use colors that look good on a light background.
-                    " Any other value is illegal.
-
 set autoindent      " Copy indent from current line when starting a new line
                     " (typing <CR> in Insert mode or when using the "o" or "O"
                     " command).
-
 set ruler           " Show the line and column number of the cursor position,
                     " separated by a comma.
-
 set mouse=a         " Enable the use of the mouse.
-
 set incsearch       " While typing a search command, show immediately where the
                     " so far typed pattern matches.
-
 set number          " Show line numbers.
-
-set cursorline    " highlight current line
-
-set noerrorbells  " shut up the beep
-
+set cursorline      " highlight current line
+set noerrorbells    " shut up the beep
 set wildmenu
-
 set nocompatible
-
 set laststatus=2
-
 set statusline=%<\ %t\ %m%r%y%w%=Col:\ \%c\ Lin:\ \%l\/\%L\
-
 set shell=/bin/bash
 
 filetype on
 filetype plugin indent on     " required!
 
 syntax on
+
 colorscheme Tomorrow-Night
 
-" use ,F to jump to tag in a vertical split
-nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
-
-" use ,gf to go to file in a vertical split
-nnoremap <silent> ,gf :vertical botright wincmd f<CR>
-
+let mapleader = ","
 " use F5 to get rid of trailing spaces
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
+" Disable arrow keys
+map <up>    <nop>
+map <down>  <nop>
+map <left>  <nop>
+map <right> <nop>
+" Moving between buffers
+noremap <C-J>     <C-W>j
+noremap <C-K>     <C-W>k
+noremap <C-H>     <C-W>h
+noremap <C-L>     <C-W>l
 
-let mapleader = ","
+" NERDTree
+let NERDTreeWinPos = "left"      " left
+let NERDTreeMouseMode = 3        " single click
+let NERDTreeMinimalUI = 1        " without ? nor bookmarks
 
-" Fix up C-motion keys
-map  <Esc>[1;5A <C-Up>
-map! <Esc>[1;5A <C-Up>
-map  <Esc>[1;5B <C-Down>
-map! <Esc>[1;5B <C-Down>
-map  <Esc>[1;5C <C-Right>
-map! <Esc>[1;5C <C-Right>
-map  <Esc>[1;5D <C-Left>
-map! <Esc>[1;5D <C-Left>
-map  <Esc>[1;5F <C-End>
-map! <Esc>[1;5F <C-End>
-map  <Esc>[1;5H <C-Home>
-map! <Esc>[1;5H <C-Home>
-map  <Esc>[2;5~ <C-Insert>
-map! <Esc>[2;5~ <C-Insert>
-map  <Esc>[3;5~ <C-Delete>
-map! <Esc>[3;5~ <C-Delete>
-map  <Esc>[5;5~ <C-PageUp>
-map! <Esc>[5;5~ <C-PageUp>
-map  <Esc>[6;5~ <C-PageDown>
-map! <Esc>[6;5~ <C-PageDown>
+" Minibuffer Explorer Settings
+let g:miniBufExplorerMoreThanOne = 1   " Open only when having more than one buffer
+let g:miniBufExplUseSingleClick = 1    " Use single click
+let g:miniBufExplCheckDupeBufs = 0     " Disable duplicated names feature
+let g:miniBufExplShowBufNumbers = 1    " Omit buffer number
+let g:miniBufExplModSelTarget = 1
 
-" Bubble single lines: ctrl + up/down
-nmap <C-Up> ddkP
-nmap <C-Down> ddp
-
-" Bubble multiple lines
-vmap <C-Up> xkP`[V`]
-vmap <C-Down> xp`[V`]
+" vim-ctrlp
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0
 
 if has("autocmd")
  " Restore cursor position
@@ -97,5 +66,6 @@ if has("autocmd")
        \ endif
 endif
 
-vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
-map <Insert> :set paste<CR>i<CR><CR><Esc>k:.!xclip -o<CR>JxkJx:set nopaste<CR>
+" Old copy/paste
+" vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
+" map <Insert> :set paste<CR>i<CR><CR><Esc>k:.!xclip -o<CR>JxkJx:set nopaste<CR>
