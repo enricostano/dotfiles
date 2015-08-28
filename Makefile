@@ -1,6 +1,7 @@
 DIRECTORY=~/dotfiles
 
 install:
+	ln -fs $(DIRECTORY)/Xresources ~/.Xresources
 	ln -fs $(DIRECTORY)/vim ~/.vim
 	ln -fs $(DIRECTORY)/vim/vimrc ~/.vimrc
 	ln -fs $(DIRECTORY)/gitconfig ~/.gitconfig
