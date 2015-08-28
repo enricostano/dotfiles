@@ -67,6 +67,12 @@ if has("autocmd")
        \ endif
 endif
 
+" set swap and backup directories outside your working directory
+" the double slash path at the end allows you to avoid collisions
+" opening files with the same name in different directories
+set backupdir=~/.vim/tmpdir//,.
+set directory=~/.vim/tmpdir//,.
+
 " Old copy/paste
 " vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
 " map <Insert> :set paste<CR>i<CR><CR><Esc>k:.!xclip -o<CR>JxkJx:set nopaste<CR>
