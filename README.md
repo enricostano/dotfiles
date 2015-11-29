@@ -1,7 +1,7 @@
 # Install dotfiles
 
 ``` bash
-cd
+cd ~
 git clone https://github.com/enricostano/dotfiles
 cd dotfiles
 make
