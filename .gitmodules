@@ -28,3 +28,6 @@
 [submodule "vim/bundle/minibufexpl.vim"]
 	path = vim/bundle/minibufexpl.vim
 	url = git@github.com:fholgado/minibufexpl.vim.git
+[submodule "vim/bundle/rust.vim"]
+	path = vim/bundle/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git

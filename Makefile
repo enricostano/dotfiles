@@ -1,11 +1,16 @@
 DIRECTORY=~/dotfiles
 
-install:
-	ln -fs $(DIRECTORY)/vim ~/.vim
-	ln -fs $(DIRECTORY)/vim/vimrc ~/.vimrc
-	ln -fs $(DIRECTORY)/gitconfig ~/.gitconfig
-	ln -fs $(DIRECTORY)/fish/functions ~/.config/fish
-	ln -fs $(DIRECTORY)/i3/config ~/.i3/config
-	ln -fs $(DIRECTORY)/i3/i3status.conf ~/.i3status.conf
+install: setup
+	ln -fsn $(DIRECTORY)/Xresources ~/.Xresources
+	ln -fsn $(DIRECTORY)/vim ~/.vim
+	ln -fsn $(DIRECTORY)/vim/vimrc ~/.vimrc
+	ln -fsn $(DIRECTORY)/gitconfig ~/.gitconfig
+	ln -fsn $(DIRECTORY)/fish/functions ~/.config/fish
+	ln -fsn $(DIRECTORY)/i3/config ~/.i3/config
+	ln -fsn $(DIRECTORY)/i3/i3status.conf ~/.i3status.conf
+
+setup:
+	git submodule init
+	git submodule update
 
 .PHONY: install
