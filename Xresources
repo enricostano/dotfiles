@@ -3,6 +3,8 @@ XTerm*VT100.geometry: 120x30
 XTerm*faceName: Terminal
 XTerm*faceSize: 10
 XTerm*selectToClipboard: true
+URxvt*font: xft:Inconsolata, 40
+URxvt*scrollBar: false
 ! Solarized color scheme for the X Window System!
 ! http://ethanschoonover.com/solarized
 
