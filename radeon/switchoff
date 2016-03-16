@@ -1,0 +1,3 @@
+#!/bin/sh -
+#sudo sh -c "echo OFF > /sys/kernel/debug/vgaswitcheroo/switch"
+sudo sh -c "echo '\_SB.PCI0.P0P3.PEGP._OFF' > /proc/acpi/call"

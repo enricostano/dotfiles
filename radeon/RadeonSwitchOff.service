@@ -1,0 +1,8 @@
+[Unit]
+Description=Switch off Radeon discrete card
+
+[Service]
+ExecStart=/usr/local/bin/switchoff
+
+[Install]
+WantedBy=multi-user.target
