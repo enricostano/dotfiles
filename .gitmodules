@@ -25,3 +25,6 @@
 [submodule "nvim/bundle/rust.vim"]
 	path = nvim/bundle/rust.vim
 	url = git@github.com:rust-lang/rust.vim.git
+[submodule "nvim/bundle/vim-test"]
+	path = nvim/bundle/vim-test
+	url = git@github.com:janko-m/vim-test
