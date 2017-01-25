@@ -1,33 +1,27 @@
-[submodule "vim/bundle/gist-vim"]
-	path = vim/bundle/gist-vim
+[submodule "nvim/bundle/gist-vim"]
+	path = nvim/bundle/gist-vim
 	url = git@github.com:mattn/gist-vim.git
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
+[submodule "nvim/bundle/nerdtree"]
+	path = nvim/bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
+[submodule "nvim/bundle/nerdcommenter"]
+	path = nvim/bundle/nerdcommenter
 	url = git@github.com:scrooloose/nerdcommenter.git
-[submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
+[submodule "nvim/bundle/vim-fugitive"]
+	path = nvim/bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule "vim/bundle/vim-rails"]
-	path = vim/bundle/vim-rails
+[submodule "nvim/bundle/vim-rails"]
+	path = nvim/bundle/vim-rails
 	url = git@github.com:tpope/vim-rails.git
-[submodule "vim/bundle/ShowTrailingWhitespace"]
-	path = vim/bundle/ShowTrailingWhitespace
+[submodule "nvim/bundle/ShowTrailingWhitespace"]
+	path = nvim/bundle/ShowTrailingWhitespace
 	url = git@github.com:vim-scripts/ShowTrailingWhitespace.git
-[submodule "vim/bundle/webapi-vim"]
-	path = vim/bundle/webapi-vim
-	url = git@github.com:mattn/webapi-vim.git
-[submodule "vim/bundle/jshint.vim"]
-	path = vim/bundle/jshint.vim
-	url = git@github.com:walm/jshint.vim.git
-[submodule "vim/bundle/ctrlp.vim"]
-	path = vim/bundle/ctrlp.vim
+[submodule "nvim/bundle/ctrlp.vim"]
+	path = nvim/bundle/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim.git
-[submodule "vim/bundle/minibufexpl.vim"]
-	path = vim/bundle/minibufexpl.vim
+[submodule "nvim/bundle/minibufexpl.vim"]
+	path = nvim/bundle/minibufexpl.vim
 	url = git@github.com:fholgado/minibufexpl.vim.git
-[submodule "vim/bundle/rust.vim"]
-	path = vim/bundle/rust.vim
+[submodule "nvim/bundle/rust.vim"]
+	path = nvim/bundle/rust.vim
 	url = git@github.com:rust-lang/rust.vim.git
