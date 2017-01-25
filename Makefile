@@ -2,8 +2,7 @@ DIRECTORY=~/dotfiles
 
 install: setup
 	ln -fsn $(DIRECTORY)/Xresources ~/.Xresources
-	ln -fsn $(DIRECTORY)/vim ~/.vim
-	ln -fsn $(DIRECTORY)/vim/vimrc ~/.vimrc
+	ln -fsn $(DIRECTORY)/nvim ~/.config/nvim
 	ln -fsn $(DIRECTORY)/gitconfig ~/.gitconfig
 	ln -fsn $(DIRECTORY)/fish/functions ~/.config/fish
 	ln -fsn $(DIRECTORY)/i3/config ~/.i3/config
