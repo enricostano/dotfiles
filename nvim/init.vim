@@ -76,3 +76,11 @@ set directory=~/.vim/tmpdir//,.
 " Old copy/paste
 " vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
 " map <Insert> :set paste<CR>i<CR><CR><Esc>k:.!xclip -o<CR>JxkJx:set nopaste<CR>
+
+function! DevenvTransform(cmd) abort
+  return 'ssh ubuntu@local.redbooth.com '.shellescape('cd teambox-hosted; '.a:cmd)
+endfunction
+
+let g:test#strategy = "neoterm"
+let g:test#custom_transformations = {'devenv': function('DevenvTransform')}
+let g:test#transformation = 'devenv'
