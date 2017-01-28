@@ -28,3 +28,6 @@
 [submodule "nvim/bundle/vim-test"]
 	path = nvim/bundle/vim-test
 	url = git@github.com:janko-m/vim-test
+[submodule "nvim/bundle/neoterm"]
+	path = nvim/bundle/neoterm
+	url = git@github.com:kassio/neoterm
