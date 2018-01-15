@@ -1,6 +1,9 @@
 URxvt*termName: xterm-256color
-URxvt*font: xft:Inconsolata:size=20
+URxvt*font: xft:Inconsolata:size=14
 URxvt*scrollBar: false
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
 ! Solarized color scheme for the X Window System!
 ! http://ethanschoonover.com/solarized
 
