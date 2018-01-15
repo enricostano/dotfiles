@@ -7,7 +7,7 @@ install: setup
 	ln -fsn $(DIRECTORY)/fish/functions ~/.config/fish
 	ln -fsn $(DIRECTORY)/i3/config ~/.config/i3
 	ln -fsn $(DIRECTORY)/i3/i3status.conf ~/.i3status.conf
-	ln -fsn $(DIRECTORY)/systemd/user/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
+	ln -fsn $(DIRECTORY)/systemd ~/.config/systemd
 
 setup:
 	git submodule init
