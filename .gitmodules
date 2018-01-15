@@ -31,3 +31,6 @@
 [submodule "nvim/bundle/neoterm"]
 	path = nvim/bundle/neoterm
 	url = git@github.com:kassio/neoterm
+[submodule "nvim/bundle/ale"]
+	path = nvim/bundle/ale
+	url = git@github.com:w0rp/ale.git
