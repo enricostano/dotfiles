@@ -2,6 +2,8 @@ DIRECTORY=~/dotfiles
 
 install: setup
 	ln -fsn $(DIRECTORY)/bash/bashrc ~/.bashrc
+	ln -fsn $(DIRECTORY)/Xresources ~/.Xresources
+	ln -fsn $(DIRECTORY)/xinitrc ~/.xinitrc
 	ln -fsn $(DIRECTORY)/systemd ~/.config/systemd
 	ln -fsn $(DIRECTORY)/i3/config ~/.config/i3
 	ln -fsn $(DIRECTORY)/i3/i3status.conf ~/.i3status.conf
