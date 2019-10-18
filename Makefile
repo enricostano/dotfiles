@@ -1,7 +1,6 @@
 DIRECTORY=~/dotfiles
 
 install: setup
-	ln -fsn $(DIRECTORY)/Xresources ~/.Xresources
 	ln -fsn $(DIRECTORY)/nvim ~/.config/nvim
 	ln -fsn $(DIRECTORY)/gitconfig ~/.gitconfig
 	ln -fsn $(DIRECTORY)/i3/config ~/.config/i3
