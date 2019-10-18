@@ -1,0 +1,32 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias ll='ls -lv --group-directories-first'
+alias la='ll -A'
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# Fzf
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
+
+# Git
+source /usr/share/git/git-prompt.sh
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWCOLORHINTS=true
+export PROMPT_COMMAND='__git_ps1 "\w" "\\\$ "'
+
+# Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
