@@ -1,11 +1,6 @@
 [user]
 	name = Enrico Stano
-	email = ocirne.onats@gmail.com
-[github]
-	user = enricostano
-[alias]
-	show-graph = log --graph --abbrev-commit --pretty=oneline
-  glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
+	email = enricostn@gmail.com
 [color]
   diff = auto
   branch = auto
@@ -19,18 +14,10 @@
   out = !git log origin/$(git current)..
   co = checkout
   cm = commit
+	show-graph = log --graph --abbrev-commit --pretty=oneline
+  glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = /home/enrico/.gitignore_global
-[merge "railsschema"]
-    name = newer Rails schema version
-      driver = "ruby -e '\n\
-        system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
-        b = File.read(%(%A))\n\
-        b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n>+ .*/) do\n\
-          %(ActiveRecord::Schema.define(:version => #{[$1, $2].max}) do)\n\
-        end\n\
-        File.open(%(%A), %(w)) {|f| f.write(b)}\n\
-        exit 1 if b.include?(%(<)*%L)'"
 [push]
 	default = upstream
