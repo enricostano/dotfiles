@@ -84,3 +84,11 @@ endfunction
 let g:test#strategy = "neoterm"
 let g:test#custom_transformations = {'devenv': function('DevenvTransform')}
 let g:test#transformation = 'devenv'
+
+let python_host_prog = "/usr/bin/python2"
+let python3_host_prog = "/usr/bin/python3"
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black'],
+\}
